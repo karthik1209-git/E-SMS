@@ -1,0 +1,53 @@
+{% extends "main/layout.html" %}
+{% block content %}
+<body><center><br>
+	<div class="container" style="margin:80px" ><br>
+		<h1 >Contact</h1><br>
+		<h4>Contact us directly if you have any questions</h4><br>
+
+		<form method="post">
+        {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Submit</button>
+        </form><br>
+    </div></center>
+    <style>
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            position: relative;
+            overflow: hidden;
+            width: 500px;
+            max-width: 100%;
+            min-height: 100px;
+            outline: #111111;
+        }
+        .form-control{
+            position: center;
+            overflow: hidden;
+            width: 768px;
+            max-width: 100%;
+            min-height: 40px;
+        }
+        .container * {
+        box-sizing: border-box;
+    
+    }
+    .first_name{
+        float: left;
+        
+    }
+	.last_name{
+        float: left;
+    }
+	.email_address{
+        float: left;
+    }
+	.message{
+        float: left;
+    }
+        </style>
+</body>
+
+{% endblock content %}

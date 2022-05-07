@@ -1,0 +1,31 @@
+
+
+{% block content %}
+
+<head>
+    <style>
+        .center {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <img src="https://www.freeiconspng.com/thumbs/success-icon/success-icon-10.png">
+        <h1>
+           !! Payment Successfull !! 
+        </h1>
+        <h2>
+            <a href="{% url 'main:ordered' %}">
+                Click Here to Redirect!
+            </a>
+        </h2>
+    </div> 
+</body>
+
+{% endblock content %}

@@ -1,0 +1,131 @@
+{% extends "main/layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  width: 300px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>SDP-2 Group 419.</p>
+  <p>Service Management System.</p>
+</div><br>
+<center>
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="../media/1.jpeg" alt="prasanth" style="width:100%">
+      <div class="container">
+        <h2>Turlapati Sai Prasanth</h2>
+        <p class="title">Developer & Student at KL University</p>
+        <p>Sophomore.</p>
+        <p>190031647@kluniversity.in</p>
+        <p><form action="{% url 'main:contact' %}" method="get"><button class="button">Contact</button></form></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="../media/2.jpeg" alt="kalyan" style="width:100%">
+      <div class="container">
+        <h2>Chandanala Kalyan</h2>
+        <p class="title">Developer & Student at KL University</p>
+        <p>Sophomore.</p>
+        <p>190030265@kluniversity.in</p>
+        <p><form action="{% url 'main:contact' %}" method="get"><button class="button">Contact</button></form></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="../media/3.jpeg" alt="karthik" style="width:100%">
+      <div class="container">
+        <h2>Karthik Chaithanya</h2>
+        <p class="title">Developer & Student at KL University</p>
+        <p>Sophomore.</p>
+        <p>190031252@kluniversity.in</p>
+        <p><form action="{% url 'main:contact' %}" method="get"><button class="button">Contact</button></form></p>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+</body>
+</html>
+{% endblock content %}
